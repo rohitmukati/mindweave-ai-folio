@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Linkedin, 
-  Github, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Github,
   Twitter,
   Send,
   Calendar,
@@ -31,7 +31,7 @@ const ContactSection = () => {
       icon: MapPin,
       label: "Location",
       value: "Indore, MP, India",
-      link: null
+      link: "https://maps.app.goo.gl/RNGfB1KaQrCcNCJm6"
     }
   ];
 
@@ -96,7 +96,7 @@ const ContactSection = () => {
                     <label className="text-sm font-medium text-foreground">
                       First Name
                     </label>
-                    <Input 
+                    <Input
                       placeholder="John"
                       className="glass-card border-glass-border focus:border-primary transition-colors"
                     />
@@ -105,7 +105,7 @@ const ContactSection = () => {
                     <label className="text-sm font-medium text-foreground">
                       Last Name
                     </label>
-                    <Input 
+                    <Input
                       placeholder="Doe"
                       className="glass-card border-glass-border focus:border-primary transition-colors"
                     />
@@ -116,7 +116,7 @@ const ContactSection = () => {
                   <label className="text-sm font-medium text-foreground">
                     Email Address
                   </label>
-                  <Input 
+                  <Input
                     type="email"
                     placeholder="john.doe@company.com"
                     className="glass-card border-glass-border focus:border-primary transition-colors"
@@ -127,7 +127,7 @@ const ContactSection = () => {
                   <label className="text-sm font-medium text-foreground">
                     Company (Optional)
                   </label>
-                  <Input 
+                  <Input
                     placeholder="Your Company"
                     className="glass-card border-glass-border focus:border-primary transition-colors"
                   />
@@ -137,7 +137,7 @@ const ContactSection = () => {
                   <label className="text-sm font-medium text-foreground">
                     Project Type
                   </label>
-                  <select className="w-full h-10 px-3 rounded-md glass-card border border-glass-border focus:border-primary transition-colors bg-transparent text-foreground">
+                  <select className="w-full h-10 px-3 rounded-md glass-card border border-glass-border focus:border-primary transition-colors bg-background text-foreground">
                     <option value="">Select a service</option>
                     <option value="ai-model">AI Model Development</option>
                     <option value="chatbot">Conversational AI & Chatbots</option>
@@ -149,11 +149,12 @@ const ContactSection = () => {
                   </select>
                 </div>
 
+
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-foreground">
                     Project Description
                   </label>
-                  <Textarea 
+                  <Textarea
                     placeholder="Tell me about your project, challenges, and goals..."
                     rows={4}
                     className="glass-card border-glass-border focus:border-primary transition-colors resize-none"
@@ -164,7 +165,7 @@ const ContactSection = () => {
                   <label className="text-sm font-medium text-foreground">
                     Timeline & Budget
                   </label>
-                  <Textarea 
+                  <Textarea
                     placeholder="When do you need this completed? What's your budget range?"
                     rows={2}
                     className="glass-card border-glass-border focus:border-primary transition-colors resize-none"
@@ -204,7 +205,7 @@ const ContactSection = () => {
                         <div>
                           <div className="text-sm text-muted-foreground">{contact.label}</div>
                           {contact.link ? (
-                            <a 
+                            <a
                               href={contact.link}
                               className="text-foreground hover:text-primary transition-colors font-medium"
                             >
@@ -256,7 +257,7 @@ const ContactSection = () => {
               </div>
 
               {/* Schedule consultation */}
-              <div className="glass-card p-8 text-center">
+              {/* <div className="glass-card p-8 text-center">
                 <Calendar className="w-12 h-12 text-primary mx-auto mb-4 pulse-glow" />
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   Schedule a Free Consultation
@@ -268,7 +269,7 @@ const ContactSection = () => {
                   <Calendar className="w-5 h-5" />
                   Book a Call
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -279,7 +280,7 @@ const ContactSection = () => {
                 Guaranteed Response Time
               </h4>
               <p className="text-muted-foreground">
-                I respond to all inquiries within 24 hours. For urgent projects or questions, 
+                I respond to all inquiries within 24 hours. For urgent projects or questions,
                 don't hesitate to call me directly. I'm here to help you succeed with AI.
               </p>
             </div>

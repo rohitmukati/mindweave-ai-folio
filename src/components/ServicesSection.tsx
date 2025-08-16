@@ -11,6 +11,14 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Scroll function
+const scrollToSection = (id: string) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const ServicesSection = () => {
   const services = [
     {
@@ -23,7 +31,6 @@ const ServicesSection = () => {
         "Performance Benchmarking",
         "Production Deployment"
       ],
-      pricing: "Starting at $5,000",
       popular: false
     },
     {
@@ -36,7 +43,6 @@ const ServicesSection = () => {
         "Integration with Existing Systems",
         "Multi-language Support"
       ],
-      pricing: "Starting at $3,000",
       popular: true
     },
     {
@@ -49,7 +55,6 @@ const ServicesSection = () => {
         "Real-time Video Analysis",
         "Custom Vision Models"
       ],
-      pricing: "Starting at $4,000",
       popular: false
     },
     {
@@ -62,7 +67,6 @@ const ServicesSection = () => {
         "Real-time Dashboards",
         "Business Intelligence"
       ],
-      pricing: "Starting at $2,500",
       popular: false
     },
     {
@@ -75,7 +79,6 @@ const ServicesSection = () => {
         "Continuous Integration/Deployment",
         "Monitoring & Maintenance"
       ],
-      pricing: "Starting at $6,000",
       popular: false
     },
     {
@@ -88,7 +91,6 @@ const ServicesSection = () => {
         "Implementation Roadmap",
         "Team Training & Workshops"
       ],
-      pricing: "Starting at $1,500",
       popular: false
     }
   ];
@@ -177,14 +179,12 @@ const ServicesSection = () => {
                     ))}
                   </ul>
 
-                  {/* Pricing and CTA */}
+                  {/* CTA Button → Scroll to Contact */}
                   <div className="mt-auto">
-                    <div className="text-lg font-semibold text-primary mb-4">
-                      {service.pricing}
-                    </div>
                     <Button 
                       variant={service.popular ? "hero" : "outline"} 
                       className="w-full group"
+                      onClick={() => scrollToSection("contact")}
                     >
                       Get Started
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -243,11 +243,11 @@ const ServicesSection = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="lg">
+                <Button variant="hero" size="lg" onClick={() => scrollToSection("contact")}>
                   <Users className="w-5 h-5" />
                   Schedule a Consultation
                 </Button>
-                <Button variant="glass" size="lg">
+                <Button variant="glass" size="lg" onClick={() => scrollToSection("contact")}>
                   <MessageSquare className="w-5 h-5" />
                   Discuss Your Project
                 </Button>

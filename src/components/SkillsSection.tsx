@@ -191,7 +191,7 @@ const SkillsSection = () => {
             </h3>
             <div className="space-y-6">
               <div className="border-l-2 border-primary/20 pl-6">
-                <h4 className="text-lg font-semibold">AI & ML Intern</h4>
+                <h4 className="text-lg font-semibold">AI Engineer</h4>
                 <p className="text-primary font-medium">NeevCloud</p>
                 <p className="text-sm text-muted-foreground">Dec 2024 - Present</p>
                 <p className="text-sm mt-2">Chanakya AI, End-to-End Speech-to-Speech Pipeline</p>

@@ -37,7 +37,7 @@ const AboutSection = () => {
               <span className="gradient-text">About Me</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              B.Tech student specializing in AI & ML, building innovative solutions with generative AI and automation
+              AI Engineer passionate about building intelligent, scalable solutions using ML, DL, and agentic AI—transforming data into impactful innovations for a smarter future.
             </p>
           </div>
 
@@ -49,19 +49,13 @@ const AboutSection = () => {
                   My Journey in AI & Machine Learning
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Currently pursuing B.Tech in Information Technology with specialization in AI & ML at Vikrant Group 
-                  of Technology and Management. My passion for AI began with exploring the potential of machine learning 
-                  to solve real-world problems and has evolved into hands-on experience with cutting-edge technologies.
+                  Coming from a small village where technology was hardly known, I first encountered the concept of artificial intelligence during my computer science studies. What began as pure curiosity turned into countless nights of self-learning, research, and experiments—teaching myself how machines can learn, adapt, and make decisions.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Through internships at NeevCloud and VRadicals, I've gained practical experience in building 
-                  LLM-based applications, RAG systems, and end-to-end AI pipelines. From fine-tuning OCR models 
-                  to creating speech-to-speech AI systems, I focus on delivering solutions that make a real impact.
+                  Over the past 2 years, I've had the privilege of working with cutting-edge technologies like PyTorch, TensorFlow, and Hugging Face, building everything from conversational AI systems to computer vision applications that process millions of images daily.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  What excites me most is the intersection of generative AI and practical applications - building 
-                  intelligent systems that automate complex workflows, from educational assistants to hiring 
-                  automation platforms. I believe AI should augment human capabilities and simplify complex processes.
+                  What drives me today is the same spark I felt in those early days—bridging the gap between research and real-world applications, and building AI systems that make complex tasks simple, intuitive, and meaningful.
                 </p>
               </div>
 
