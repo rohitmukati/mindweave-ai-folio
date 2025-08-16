@@ -1,0 +1,293 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Linkedin, 
+  Github, 
+  Twitter,
+  Send,
+  Calendar,
+  MessageCircle
+} from "lucide-react";
+
+const ContactSection = () => {
+  const contactInfo = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: "alex.chen@aiexpert.com",
+      link: "mailto:alex.chen@aiexpert.com"
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+1 (555) 123-4567",
+      link: "tel:+15551234567"
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: "San Francisco, CA",
+      link: null
+    }
+  ];
+
+  const socialLinks = [
+    {
+      icon: Github,
+      label: "GitHub",
+      username: "@alexchen-ai",
+      link: "https://github.com",
+      color: "hover:text-primary"
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      username: "Alex Chen",
+      link: "https://linkedin.com",
+      color: "hover:text-secondary"
+    },
+    {
+      icon: Twitter,
+      label: "Twitter",
+      username: "@alexchen_ai",
+      link: "https://twitter.com",
+      color: "hover:text-accent"
+    }
+  ];
+
+  return (
+    <section id="contact" className="py-20 relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-accent/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-6xl mx-auto">
+          {/* Section header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              <span className="gradient-text">Let's Build Something Amazing</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Ready to transform your business with AI? Let's discuss your project and create intelligent solutions together.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact form */}
+            <div className="glass-card p-8">
+              <div className="flex items-center mb-6">
+                <MessageCircle className="w-6 h-6 text-primary mr-3 pulse-glow" />
+                <h3 className="text-2xl font-semibold text-foreground">
+                  Send Me a Message
+                </h3>
+              </div>
+
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">
+                      First Name
+                    </label>
+                    <Input 
+                      placeholder="John"
+                      className="glass-card border-glass-border focus:border-primary transition-colors"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">
+                      Last Name
+                    </label>
+                    <Input 
+                      placeholder="Doe"
+                      className="glass-card border-glass-border focus:border-primary transition-colors"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Email Address
+                  </label>
+                  <Input 
+                    type="email"
+                    placeholder="john.doe@company.com"
+                    className="glass-card border-glass-border focus:border-primary transition-colors"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Company (Optional)
+                  </label>
+                  <Input 
+                    placeholder="Your Company"
+                    className="glass-card border-glass-border focus:border-primary transition-colors"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Project Type
+                  </label>
+                  <select className="w-full h-10 px-3 rounded-md glass-card border border-glass-border focus:border-primary transition-colors bg-transparent text-foreground">
+                    <option value="">Select a service</option>
+                    <option value="ai-model">AI Model Development</option>
+                    <option value="chatbot">Conversational AI & Chatbots</option>
+                    <option value="computer-vision">Computer Vision Solutions</option>
+                    <option value="data-analytics">Data Analytics & ML Insights</option>
+                    <option value="mlops">MLOps & Infrastructure</option>
+                    <option value="consulting">AI Consulting & Strategy</option>
+                    <option value="custom">Custom Solution</option>
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Project Description
+                  </label>
+                  <Textarea 
+                    placeholder="Tell me about your project, challenges, and goals..."
+                    rows={4}
+                    className="glass-card border-glass-border focus:border-primary transition-colors resize-none"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Timeline & Budget
+                  </label>
+                  <Textarea 
+                    placeholder="When do you need this completed? What's your budget range?"
+                    rows={2}
+                    className="glass-card border-glass-border focus:border-primary transition-colors resize-none"
+                  />
+                </div>
+
+                <Button variant="hero" size="lg" className="w-full">
+                  <Send className="w-5 h-5" />
+                  Send Message
+                </Button>
+
+                <p className="text-xs text-muted-foreground text-center">
+                  I'll get back to you within 24 hours. For urgent inquiries, please call directly.
+                </p>
+              </form>
+            </div>
+
+            {/* Contact info and social links */}
+            <div className="space-y-8">
+              {/* Quick contact */}
+              <div className="glass-card p-8">
+                <div className="flex items-center mb-6">
+                  <Mail className="w-6 h-6 text-primary mr-3 pulse-glow" />
+                  <h3 className="text-2xl font-semibold text-foreground">
+                    Quick Contact
+                  </h3>
+                </div>
+
+                <div className="space-y-4">
+                  {contactInfo.map((contact, index) => {
+                    const ContactIcon = contact.icon;
+                    return (
+                      <div key={index} className="flex items-center space-x-4 p-3 rounded-lg hover:bg-glass/50 transition-colors">
+                        <div className="glass-card p-3 rounded-lg">
+                          <ContactIcon className="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                          <div className="text-sm text-muted-foreground">{contact.label}</div>
+                          {contact.link ? (
+                            <a 
+                              href={contact.link}
+                              className="text-foreground hover:text-primary transition-colors font-medium"
+                            >
+                              {contact.value}
+                            </a>
+                          ) : (
+                            <div className="text-foreground font-medium">{contact.value}</div>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Social links */}
+              <div className="glass-card p-8">
+                <div className="flex items-center mb-6">
+                  <Linkedin className="w-6 h-6 text-primary mr-3 pulse-glow" />
+                  <h3 className="text-2xl font-semibold text-foreground">
+                    Connect With Me
+                  </h3>
+                </div>
+
+                <div className="space-y-4">
+                  {socialLinks.map((social, index) => {
+                    const SocialIcon = social.icon;
+                    return (
+                      <a
+                        key={index}
+                        href={social.link}
+                        className="flex items-center space-x-4 p-3 rounded-lg hover:bg-glass/50 transition-colors group"
+                      >
+                        <div className="glass-card p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
+                          <SocialIcon className={`w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors`} />
+                        </div>
+                        <div>
+                          <div className="text-foreground font-medium group-hover:text-primary transition-colors">
+                            {social.label}
+                          </div>
+                          <div className="text-sm text-muted-foreground">
+                            {social.username}
+                          </div>
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Schedule consultation */}
+              <div className="glass-card p-8 text-center">
+                <Calendar className="w-12 h-12 text-primary mx-auto mb-4 pulse-glow" />
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  Schedule a Free Consultation
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  Let's discuss your AI project in detail. Book a 30-minute call to explore how we can work together.
+                </p>
+                <Button variant="accent" size="lg" className="w-full">
+                  <Calendar className="w-5 h-5" />
+                  Book a Call
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Response time promise */}
+          <div className="text-center mt-16">
+            <div className="glass-card p-6 max-w-2xl mx-auto">
+              <h4 className="text-lg font-semibold text-foreground mb-2">
+                Guaranteed Response Time
+              </h4>
+              <p className="text-muted-foreground">
+                I respond to all inquiries within 24 hours. For urgent projects or questions, 
+                don't hesitate to call me directly. I'm here to help you succeed with AI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
