@@ -4,23 +4,23 @@ const AboutSection = () => {
   const highlights = [
     {
       icon: Brain,
-      title: "AI Specialist",
-      description: "5+ years developing cutting-edge ML models and neural networks"
+      title: "LLM & RAG Expert",
+      description: "Specialized in building intelligent systems with LangChain and OpenAI APIs"
     },
     {
       icon: Code,
-      title: "Full Stack ML",
-      description: "From research to production, building end-to-end AI solutions"
+      title: "End-to-End Solutions",
+      description: "From data collection to deployment, creating scalable AI applications"
     },
     {
       icon: Lightbulb,
-      title: "Innovation Driven",
-      description: "Passionate about solving complex problems with creative AI approaches"
+      title: "Innovation Focused",
+      description: "Building cutting-edge applications like speech-to-speech pipelines and automated hiring systems"
     },
     {
       icon: Target,
-      title: "Results Focused",
-      description: "Delivered 20+ production ML systems with measurable business impact"
+      title: "Real-World Impact",
+      description: "Developed 10+ AI projects with practical applications in education and business automation"
     }
   ];
 
@@ -37,7 +37,7 @@ const AboutSection = () => {
               <span className="gradient-text">About Me</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Passionate about transforming complex data into intelligent solutions that drive real-world impact
+              B.Tech student specializing in AI & ML, building innovative solutions with generative AI and automation
             </p>
           </div>
 
@@ -49,33 +49,31 @@ const AboutSection = () => {
                   My Journey in AI & Machine Learning
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  My fascination with artificial intelligence began during my computer science studies, 
-                  where I discovered the incredible potential of machines to learn and make decisions. 
-                  What started as curiosity evolved into a deep expertise in neural networks, 
-                  natural language processing, and computer vision.
+                  Currently pursuing B.Tech in Information Technology with specialization in AI & ML at Vikrant Group 
+                  of Technology and Management. My passion for AI began with exploring the potential of machine learning 
+                  to solve real-world problems and has evolved into hands-on experience with cutting-edge technologies.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Over the past 5 years, I've had the privilege of working with cutting-edge technologies 
-                  like PyTorch, TensorFlow, and Hugging Face, building everything from conversational AI 
-                  systems to computer vision applications that process millions of images daily.
+                  Through internships at NeevCloud and VRadicals, I've gained practical experience in building 
+                  LLM-based applications, RAG systems, and end-to-end AI pipelines. From fine-tuning OCR models 
+                  to creating speech-to-speech AI systems, I focus on delivering solutions that make a real impact.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  What drives me is the opportunity to bridge the gap between theoretical AI research 
-                  and practical solutions that solve real business problems. I believe the best AI 
-                  systems are those that seamlessly integrate into users' workflows, making complex 
-                  tasks simple and intuitive.
+                  What excites me most is the intersection of generative AI and practical applications - building 
+                  intelligent systems that automate complex workflows, from educational assistants to hiring 
+                  automation platforms. I believe AI should augment human capabilities and simplify complex processes.
                 </p>
               </div>
 
               {/* Key stats */}
               <div className="grid grid-cols-2 gap-6 pt-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">50+</div>
-                  <div className="text-sm text-muted-foreground">ML Models Deployed</div>
+                  <div className="text-3xl font-bold gradient-text">10+</div>
+                  <div className="text-sm text-muted-foreground">AI Projects Built</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">5+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-3xl font-bold gradient-text">2+</div>
+                  <div className="text-sm text-muted-foreground">Industry Experience</div>
                 </div>
               </div>
             </div>

@@ -18,19 +18,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "alex.chen@aiexpert.com",
-      link: "mailto:alex.chen@aiexpert.com"
+      value: "rohanmukati2002@gmail.com",
+      link: "mailto:rohanmukati2002@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+91 6261903064",
+      link: "tel:+916261903064"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Indore, MP, India",
       link: null
     }
   ];
@@ -39,22 +39,22 @@ const ContactSection = () => {
     {
       icon: Github,
       label: "GitHub",
-      username: "@alexchen-ai",
-      link: "https://github.com",
+      username: "@rohitmukati",
+      link: "https://github.com/rohitmukati",
       color: "hover:text-primary"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      username: "Alex Chen",
-      link: "https://linkedin.com",
+      username: "Rohit Mukati",
+      link: "https://www.linkedin.com/in/contact-rohit-mukati/",
       color: "hover:text-secondary"
     },
     {
-      icon: Twitter,
-      label: "Twitter",
-      username: "@alexchen_ai",
-      link: "https://twitter.com",
+      icon: Mail,
+      label: "Email",
+      username: "rohanmukati2002@gmail.com",
+      link: "mailto:rohanmukati2002@gmail.com",
       color: "hover:text-accent"
     }
   ];

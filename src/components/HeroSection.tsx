@@ -33,24 +33,24 @@ const HeroSection = () => {
               {/* Professional badge */}
               <div className="inline-flex items-center glass-card px-4 py-2 text-sm font-medium text-primary">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2 pulse-glow"></div>
-                Available for new opportunities
+                AI/ML Engineer & Innovator
               </div>
 
               {/* Main heading */}
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                  <span className="block text-foreground">Building the</span>
-                  <span className="block gradient-text">Future with AI</span>
+                  <span className="block text-foreground">Rohit</span>
+                  <span className="block gradient-text">Mukati</span>
                 </h1>
                 <p className="text-xl lg:text-2xl text-muted-foreground max-w-2xl">
-                  I'm Alex Chen, an AI & Machine Learning Engineer passionate about creating 
-                  intelligent solutions that transform industries and improve lives.
+                  AI/ML Enthusiast and Emerging AI Engineer with hands-on experience in building machine learning pipelines, 
+                  LLM-based chatbots, and Generative AI applications.
                 </p>
               </div>
 
               {/* Specializations */}
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                {['NLP', 'Computer Vision', 'Generative AI', 'Deep Learning', 'MLOps'].map((skill) => (
+                {['LangChain', 'RAG Systems', 'OpenAI', 'PyTorch', 'NLP', 'Computer Vision', 'OCR', 'Speech-to-Text'].map((skill) => (
                   <span 
                     key={skill}
                     className="glass-card px-4 py-2 text-sm font-medium text-foreground hover:bg-primary/20 transition-all duration-300"
@@ -82,14 +82,20 @@ const HeroSection = () => {
 
               {/* Social Links */}
               <div className="flex gap-4 justify-center lg:justify-start">
-                <Button variant="ghost" size="icon" className="hover-lift">
-                  <Github className="w-5 h-5" />
+                <Button variant="ghost" size="icon" className="hover-lift" asChild>
+                  <a href="https://github.com/rohitmukati" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-5 h-5" />
+                  </a>
                 </Button>
-                <Button variant="ghost" size="icon" className="hover-lift">
-                  <Linkedin className="w-5 h-5" />
+                <Button variant="ghost" size="icon" className="hover-lift" asChild>
+                  <a href="https://www.linkedin.com/in/contact-rohit-mukati/" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
                 </Button>
-                <Button variant="ghost" size="icon" className="hover-lift">
-                  <Download className="w-5 h-5" />
+                <Button variant="ghost" size="icon" className="hover-lift" asChild>
+                  <a href="mailto:rohanmukati2002@gmail.com">
+                    <Mail className="w-5 h-5" />
+                  </a>
                 </Button>
               </div>
             </div>
@@ -103,8 +109,8 @@ const HeroSection = () => {
                 {/* Profile container */}
                 <div className="relative glass-card p-6 rounded-full float">
                   <img 
-                    src={profilePhoto}
-                    alt="Alex Chen - AI & ML Engineer"
+                    src="/lovable-uploads/51a2758d-ec26-4cbb-bc0e-1a03da7b04ad.png"
+                    alt="Rohit Mukati - AI & ML Engineer"
                     className="w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover"
                   />
                 </div>

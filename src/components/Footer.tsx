@@ -42,27 +42,30 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="mb-6">
                 <h3 className="text-2xl font-bold gradient-text mb-3">
-                  Alex Chen
+                  Rohit Mukati
                 </h3>
                 <p className="text-muted-foreground leading-relaxed max-w-md">
-                  AI & Machine Learning Engineer passionate about building intelligent solutions 
-                  that transform industries and improve lives. Let's create the future together.
+                  AI/ML Engineer building intelligent systems with LangChain, RAG, and cutting-edge AI technologies. 
+                  Passionate about creating innovative solutions that solve real-world problems.
                 </p>
               </div>
 
               {/* Social links */}
               <div className="flex gap-4">
-                <Button variant="ghost" size="icon" className="hover-lift">
-                  <Github className="w-5 h-5" />
+                <Button variant="ghost" size="icon" className="hover-lift" asChild>
+                  <a href="https://github.com/rohitmukati" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-5 h-5" />
+                  </a>
                 </Button>
-                <Button variant="ghost" size="icon" className="hover-lift">
-                  <Linkedin className="w-5 h-5" />
+                <Button variant="ghost" size="icon" className="hover-lift" asChild>
+                  <a href="https://www.linkedin.com/in/contact-rohit-mukati/" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
                 </Button>
-                <Button variant="ghost" size="icon" className="hover-lift">
-                  <Twitter className="w-5 h-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="hover-lift">
-                  <Mail className="w-5 h-5" />
+                <Button variant="ghost" size="icon" className="hover-lift" asChild>
+                  <a href="mailto:rohanmukati2002@gmail.com">
+                    <Mail className="w-5 h-5" />
+                  </a>
                 </Button>
               </div>
             </div>
@@ -131,7 +134,7 @@ const Footer = () => {
           <div className="border-t border-glass-border pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center text-sm text-muted-foreground">
-                <span>© {currentYear} Alex Chen. Made with</span>
+                <span>© {currentYear} Rohit Mukati. Made with</span>
                 <Heart className="w-4 h-4 text-red-500 mx-2 animate-pulse" />
                 <span>for the AI community</span>
               </div>
