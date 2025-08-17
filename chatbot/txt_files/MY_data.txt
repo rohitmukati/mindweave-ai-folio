@@ -1,0 +1,100 @@
+About Rohit's Journey
+
+I come from a small village named Gulati near Indore.
+I spent my childhood and did my higher schooling there.
+My family is middle class, consisting of my father, mother, and sister.
+My father's name is Mohesh Mukati, my mother's name is Narmala Mukati, and my sister's name is Nandini Mukati.
+My father is a farmer, and I grew up helping and playing in the fields with friends.
+I did my schooling at Keti Hindur India Vihar and completed my twelfth there as well.
+During childhood, I loved exploring, being mischievous, and having fun with friends.
+I enjoyed playing all kinds of games, including cricket, gully danda, and football.
+Gradually, I became interested in machines and technology.
+Over time, I started learning and working on these things, and my interest kept growing.
+This journey from childhood to college shaped who I am today.
+
+About Rohit's Skills
+
+I have been learning and working with these skills for the past 2 years.
+
+Technical Expertise:
+- Artificial Intelligence & Machine Learning: 90%
+- Natural Language Processing (NLP): 85%
+- Computer Vision: 80%
+- Generative AI & LLMs: 88%
+- Machine Learning Frameworks: PyTorch: 85%, TensorFlow: 82%, Scikit-Learn: 90%
+- Deployment & Production: FastAPI: 80%, Flask: 85%, LangChain: 90%
+
+Generative AI & LLMs:
+- LangChain: 90%
+- OpenAI APIs: 85%
+- Retrieval-Augmented Generation (RAG): 88%
+- Prompt Engineering: 92%
+- Hugging Face Transformers: 80%
+
+Machine Learning & Deep Learning:
+- PyTorch: 85%
+- TensorFlow: 82%
+- Scikit-Learn: 90%
+
+Other Skills:
+- Data Preprocessing & Standard Scaling: 85%
+- Model Building & Hyperparameter Tuning: 88%
+- AI Agent Development: 80%
+- Frontend Development: React: 80%, TailwindCSS: 75%
+- Chess & Problem Solving: 85%
+
+These percentages reflect my proficiency and hands-on experience over the last 2 years.
+
+About Rohit's Projects
+
+1. Movie Recommendation System
+Objective: To build a system that recommends movies based on user preferences.
+Technologies Used: Python, Jupyter Notebook, Flask, Pandas, Scikit-learn
+Challenges:
+- Handling missing values and ensuring data consistency.
+- Choosing the right algorithm for accurate recommendations.
+- Integrating the model into a Flask web application for user interaction.
+Outcome: A functional movie recommendation system accessible via a web interface.
+
+2. AI Chatbot for Lead Generation
+Objective: To develop a chatbot that can engage users and generate leads.
+Technologies Used: Python, OpenAI API, LangChain, FastAPI
+Challenges:
+- Ensuring the chatbot understands and responds accurately to user queries.
+- Seamlessly integrating the chatbot with existing platforms.
+- Designing the system to handle multiple user interactions simultaneously.
+Outcome: A responsive AI chatbot capable of lead generation through natural conversations.
+
+3. OCR-based Document Scanner
+Objective: To create a tool that can scan and extract text from documents using OCR.
+Technologies Used: Python, Tesseract OCR, OpenCV
+Challenges:
+- Improving text extraction accuracy from varied document formats.
+- Enhancing image quality for better OCR results.
+- Optimizing the tool to process documents efficiently.
+Outcome: An OCR-based document scanner that accurately extracts text from images.
+
+4. Speech-to-Text and Text-to-Speech Application
+Objective: To develop an application that converts speech to text and vice versa.
+Technologies Used: Python, SpeechRecognition, pyttsx3
+Challenges:
+- Handling different accents and background noises.
+- Generating natural-sounding speech from text.
+- Designing an intuitive interface for seamless interaction.
+Outcome: A dual-function application that facilitates speech-to-text and text-to-speech conversions.
+
+These projects demonstrate Rohit's technical skills and his ability to tackle real-world problems with innovative solutions.
+GitHub Profile: https://github.com/rohitmukati
+
+
+Contact Rohit Mukati
+
+You can reach me through the following channels:
+
+Phone: +91 6261903064
+Email: rohitmukati@example.com
+GitHub: https://github.com/rohitmukati
+LinkedIn: https://www.linkedin.com/in/rohitmukati
+Portfolio Website: https://www.rohitmukati.com
+
+For any urgent queries, feel free to call me directly.

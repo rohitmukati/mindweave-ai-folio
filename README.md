@@ -71,3 +71,81 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+# Portfolio Project
+
+## Features
+
+- **Modern Portfolio Website** built with Vite, React, TypeScript, Tailwind CSS, and shadcn-ui.
+- **Contact Form** with automated email notifications:
+  - Sends form submissions to the site owner (admin).
+  - Sends a confirmation/thank you email to the client (the person who filled the form).
+  - If email delivery fails, the form data is saved to `messages.txt` for later review.
+- **Backend** powered by Node.js, Express, and Nodemailer for email automation.
+- **Easy Deployment** and local development.
+
+## How the Contact Form Works
+
+1. **User submits the contact form** on the website.
+2. **Backend (`server.js`) receives the data** and:
+    - Sends an email to the admin with all form details.
+    - Sends a confirmation email to the client.
+    - If email sending fails, saves the data to `messages.txt`.
+3. **No manual intervention needed**—all email automation is handled by the backend.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js & npm installed
+- (Optional) Python for previous automation scripts (no longer required)
+
+### Setup
+
+```sh
+# Install dependencies
+npm install
+
+# Start the backend server
+node server.js
+
+# Start the frontend (Vite)
+npm run dev
+```
+
+### Environment Variables
+
+Create a `.env` file in your project root:
+
+```
+GMAIL_USER=your_gmail@gmail.com
+GMAIL_APP_PASSWORD=your_app_password
+```
+
+### File Structure
+
+- `src/` — Frontend React code
+- `server.js` — Backend server for handling form submissions and sending emails
+- `messages.txt` — Stores failed email submissions (if any)
+
+## Next Steps: Chatbot Integration (Optional)
+
+You can add a RAG-based chatbot using Gemini and LangChain to answer questions about your skills, experience, and projects.  
+See the project documentation or ask for a step-by-step guide!
+
+---
+
+## Technologies Used
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+- Node.js (Express, Nodemailer)
+
+---
+
+## Deployment
+
+See [Lovable](https://lovable.dev/projects/afebe04e-8108-4128-abeb-6943e8701d79) for deployment and custom domain setup.

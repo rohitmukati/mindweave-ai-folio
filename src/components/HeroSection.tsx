@@ -50,7 +50,7 @@ const HeroSection = () => {
 
               {/* Specializations */}
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                {['LangChain', 'RAG Systems', 'OpenAI', 'PyTorch', 'NLP', 'Computer Vision', 'OCR', 'Speech-to-Text'].map((skill) => (
+                {['LangChain', 'RAG Systems', 'AI Agents', 'ML Deployment', 'NLP', 'Computer Vision', 'ChatBot Development', 'Speech-to-Speech'].map((skill) => (
                   <span 
                     key={skill}
                     className="glass-card px-4 py-2 text-sm font-medium text-foreground hover:bg-primary/20 transition-all duration-300"
@@ -109,7 +109,7 @@ const HeroSection = () => {
                 {/* Profile container */}
                 <div className="relative glass-card p-6 rounded-full float">
                   <img 
-                    src="/lovable-uploads/51a2758d-ec26-4cbb-bc0e-1a03da7b04ad.png"
+                    src="src\assets\IMG_20250401_232531.jpg"
                     alt="Rohit Mukati - AI & ML Engineer"
                     className="w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover"
                   />
