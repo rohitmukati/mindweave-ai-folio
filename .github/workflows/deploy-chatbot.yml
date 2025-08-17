@@ -8,15 +8,17 @@ on:
       - ".github/workflows/deploy-chatbot.yml"
   workflow_dispatch:
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Authenticate to GCP
         uses: google-github-actions/auth@v1
@@ -36,4 +38,9 @@ jobs:
             GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}
 
       - name: Show URL
-        run: echo "Chatbot URL: ${{ steps.deploy.outputs.url }}"
+        # use block scalar to avoid YAML parsing issues with ${{ ... }}
+        run: |
+          echo "===== Deploy step outputs ====="
+          echo "deploy.outputs.url = ${{ steps.deploy.outputs.url }}"
+          # Fallback: describe service using gcloud (only works if installed & authenticated)
+          # gcloud run services describe chatbot-api --region=${{ secrets.GCP_REGION }} --project=${{ secrets.GCP_PROJECT_ID }} --format='value(status.url)'
