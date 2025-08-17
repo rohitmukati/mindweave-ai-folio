@@ -1,8 +1,13 @@
+import React, { useState } from "react";
 import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  // Newsletter state
+  const [email, setEmail] = useState("");
+  const [feedback, setFeedback] = useState("");
 
   const quickLinks = [
     { name: "About", href: "#about" },
@@ -23,6 +28,23 @@ const Footer = () => {
 
   const scrollToSection = (id: string) => {
     document.getElementById(id.replace('#', ''))?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Newsletter subscribe handler
+  const handleSubscribe = async () => {
+    setFeedback("");
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      setFeedback("Please enter a valid email address.");
+      return;
+    }
+    try {
+      // You can replace this with your backend API call
+      // Example: await fetch("/api/newsletter", { method: "POST", body: JSON.stringify({ email }) });
+      setFeedback("Thank you for subscribing!");
+      setEmail("");
+    } catch (err) {
+      setFeedback("Something went wrong. Please try again later.");
+    }
   };
 
   return (
@@ -121,13 +143,20 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
                   className="px-4 py-2 rounded-lg glass-card border border-glass-border focus:border-primary transition-colors bg-transparent text-foreground placeholder:text-muted-foreground min-w-64"
                 />
-                <Button variant="hero">
+                <Button variant="hero" onClick={handleSubscribe}>
                   Subscribe
                 </Button>
               </div>
             </div>
+            {feedback && (
+              <div className="mt-3 text-sm text-center" style={{ color: feedback.startsWith("Thank") ? "#22c55e" : "#ef4444" }}>
+                {feedback}
+              </div>
+            )}
           </div>
 
           {/* Bottom section */}

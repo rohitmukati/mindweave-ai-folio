@@ -19,10 +19,10 @@ const skillCategories = [
     title: "Generative AI & LLMs",
     icon: Brain,
     skills: [
-      { name: "LangChain", level: 90 },
-      { name: "OpenAI APIs", level: 85 },
-      { name: "Retrieval-Augmented Generation (RAG)", level: 88 },
-      { name: "Prompt Engineering", level: 92 },
+      { name: "LangChain", level: 85 },
+      { name: "OpenAI APIs", level: 90 },
+      { name: "Retrieval-Augmented Generation (RAG)", level: 80 },
+      { name: "Prompt Engineering", level: 90 },
       { name: "Hugging Face Transformers", level: 80 }
     ]
   },
@@ -30,55 +30,55 @@ const skillCategories = [
     title: "Machine Learning & Deep Learning",
     icon: Cpu,
     skills: [
-      { name: "PyTorch", level: 85 },
-      { name: "TensorFlow", level: 82 },
+      { name: "PyTorch", level: 70 },
+      { name: "TensorFlow", level: 70 },
       { name: "Scikit-Learn", level: 90 },
-      { name: "Model Fine-tuning", level: 85 },
-      { name: "Neural Networks", level: 88 }
+      { name: "Model Fine-tuning", level: 80 },
+      { name: "Neural Networks", level: 85 }
     ]
   },
   {
     title: "NLP & Speech Processing",
     icon: MessageSquare,
     skills: [
-      { name: "Natural Language Processing", level: 88 },
+      { name: "Natural Language Processing", level: 85 },
       { name: "Speech-to-Text (Whisper)", level: 85 },
-      { name: "Text-to-Speech (Parler TTS)", level: 80 },
-      { name: "NLTK & spaCy", level: 85 },
-      { name: "Word Embeddings", level: 87 }
+      { name: "Text-to-Speech (Parler TTS)", level: 70 },
+      { name: "NLTK & spaCy", level: 80 },
+      { name: "Word Embeddings", level: 90 }
     ]
   },
   {
     title: "Computer Vision & OCR",
     icon: Eye,
     skills: [
-      { name: "OpenCV", level: 85 },
-      { name: "OCR (Tesseract, TrOCR)", level: 88 },
-      { name: "Object Detection (YOLO)", level: 82 },
+      { name: "OpenCV", level: 60 },
+      { name: "OCR (Tesseract, TrOCR)", level: 60 },
+      { name: "Object Detection (YOLO)", level: 70 },
       { name: "Mediapipe", level: 80 },
-      { name: "Face Recognition", level: 85 }
+      { name: "Face Recognition", level: 70 }
     ]
   },
   {
     title: "Programming & Tools",
     icon: Code,
     skills: [
-      { name: "Python", level: 92 },
-      { name: "SQL (MySQL, PostgreSQL)", level: 85 },
-      { name: "FastAPI & Flask", level: 88 },
+      { name: "Python", level: 95 },
+      { name: "SQL (MySQL, PostgreSQL)", level: 80 },
+      { name: "FastAPI & Flask", level: 85 },
       { name: "Git/GitHub", level: 90 },
-      { name: "Java", level: 75 }
+      { name: "Java", level: 60 }
     ]
   },
   {
     title: "Data & Databases",
     icon: Database,
     skills: [
-      { name: "Vector Databases (Pinecone)", level: 85 },
-      { name: "Data Preprocessing", level: 90 },
-      { name: "Pandas & NumPy", level: 92 },
-      { name: "Data Visualization", level: 88 },
-      { name: "PostgreSQL", level: 85 }
+      { name: "Vector Databases (Pinecone)", level: 90 },
+      { name: "Data Preprocessing", level: 95 },
+      { name: "Pandas & NumPy", level: 90 },
+      { name: "Data Visualization", level: 80 },
+      { name: "PostgreSQL", level: 60 }
     ]
   }
 ];
