@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+google-genai
+langchain
+langchain-community
+faiss-cpu
+numpy

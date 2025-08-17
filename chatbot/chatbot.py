@@ -76,6 +76,7 @@ DEFAULT_SYSTEM_PROMPT = (
   GitHub: https://github.com/rohitmukati
   LinkedIn: https://www.linkedin.com/in/contact-rohit-mukati/
   Portfolio: https://www.rohitmukati.com
+  his location is from city Indore state MP country India 
 
 2) TONE & STYLE
 - Professional, friendly, concise, helpful.
