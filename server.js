@@ -13,7 +13,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-app.use(cors());
+
+// 🔹 CORS (update later with your Vercel domain)
+app.use(cors({
+  origin: [
+    "http://localhost:5173", // local frontend
+    "https://your-frontend.vercel.app" // ⬅️ baad me apna Vercel domain dalna
+  ]
+}));
+
 app.use(express.json());
 
 const GMAIL_USER = process.env.GMAIL_USER;
@@ -52,7 +60,7 @@ app.post("/api/save-message", async (req, res) => {
   // Client confirmation mail
   const clientMailOptions = {
     from: GMAIL_USER,
-    to: message.email, // Client's email from form
+    to: message.email,
     subject: "Thank you for reaching out to Rohit Mukati!",
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -68,15 +76,12 @@ app.post("/api/save-message", async (req, res) => {
   };
 
   try {
-    // Send admin mail
     await transporter.sendMail(adminMailOptions);
-    // Send client confirmation mail (only if email is present and looks valid)
     if (message.email && message.email.includes("@")) {
       await transporter.sendMail(clientMailOptions);
     }
     res.status(200).send("Message saved and emails sent");
   } catch (error) {
-    // If email fails, save to file
     fs.appendFile(filePath, JSON.stringify(message) + "\n", (err) => {
       if (err) return res.status(500).send("Error saving message and sending email");
       res.status(500).send("Email failed, message saved to file");
@@ -85,6 +90,8 @@ app.post("/api/save-message", async (req, res) => {
   }
 });
 
-app.listen(3001, () => {
-  console.log("Backend server running on http://localhost:3001");
+// 🔹 Cloud-ready PORT + host
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Backend server running on port ${PORT}`);
 });
