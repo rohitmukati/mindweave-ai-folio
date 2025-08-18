@@ -101,6 +101,10 @@ async def chat(request: Request):
         tb = traceback.format_exc()
         return {"ok": False, "error": str(e), "traceback": tb}
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to MindWeave AI Portfolio 🚀"}
+
 # -------------------------
 # Run server (Render)
 # -------------------------
