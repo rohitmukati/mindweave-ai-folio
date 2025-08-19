@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
 import heroBackground from "@/assets/hero-bg.jpg";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/assets/IMG_20250401_232531.jpg";
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -109,7 +109,7 @@ const HeroSection = () => {
                 {/* Profile container */}
                 <div className="relative glass-card p-6 rounded-full float">
                   <img 
-                    src="src\assets\IMG_20250401_232531.jpg"
+                    src={profilePhoto}
                     alt="Rohit Mukati - AI & ML Engineer"
                     className="w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover"
                   />
