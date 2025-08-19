@@ -18,7 +18,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173", // local frontend
-    "https://mindweave-ai-folio.vercel.app/" // ⬅️ baad me apna Vercel domain dalna
+    "mindweave-ai-folio-rohit-mukatis-projects.vercel.app" // ⬅️ baad me apna Vercel domain dalna
   ]
 }));
 
