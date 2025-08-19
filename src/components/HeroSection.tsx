@@ -108,7 +108,7 @@ const HeroSection = () => {
                 {/* Profile container */}
                 <div className="relative glass-card p-6 rounded-full float">
                   <img 
-                    src="/IMG_20250401_232531.jpg"   // ✅ public se direct access
+                    src="/profile.jpg"   // ✅ public se direct access
                     alt="Rohit Mukati - AI & ML Engineer"
                     className="w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover"
                   />
