@@ -29,17 +29,9 @@ if not GEMINI_API_KEY:
     )
 
 # Optional frontend origin from env (set this to your deployed frontend domain)
-FRONTEND_URL = "https://mindweave-ai-folio-git-main-rohit-mukatis-projects.vercel.app/" # e.g. https://my-frontend.vercel.app
+FRONTEND_URL = os.getenv("FRONTEND_URL", "").rstrip("/")  # no trailing slash
 
-# Initialize Gemini client
-client = genai.Client(api_key=GEMINI_API_KEY)
-
-# -------------------------
-# FastAPI + CORS
-# -------------------------
-app = FastAPI(title="MindWeave Chatbot API", version="1.0")
-
-# allow common dev origins + optional production frontend domain
+# --- Allowed origins ---
 _allowed = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
@@ -49,16 +41,18 @@ _allowed = [
 if FRONTEND_URL:
     _allowed.append(FRONTEND_URL)
 
-# If you prefer to allow all origins during early testing, set ALLOW_ALL_ORIGINS=1 in env
+# --- Choose origins + credentials safely ---
 if os.getenv("ALLOW_ALL_ORIGINS") == "1":
     origins = ["*"]
+    allow_credentials = False     # VERY IMPORTANT when using "*"
 else:
     origins = _allowed
+    allow_credentials = True
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials=True,
+    allow_credentials=allow_credentials,
     allow_methods=["*"],
     allow_headers=["*"],
 )
