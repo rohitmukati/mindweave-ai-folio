@@ -29,7 +29,7 @@ if not GEMINI_API_KEY:
     )
 
 # Optional frontend origin from env (set this to your deployed frontend domain)
-FRONTEND_URL = os.getenv("FRONTEND_URL")  # e.g. https://my-frontend.vercel.app
+FRONTEND_URL = "https://mindweave-ai-folio-git-main-rohit-mukatis-projects.vercel.app/" # e.g. https://my-frontend.vercel.app
 
 # Initialize Gemini client
 client = genai.Client(api_key=GEMINI_API_KEY)
