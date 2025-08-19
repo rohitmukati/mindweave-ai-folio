@@ -14,16 +14,41 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-// 🔹 CORS (update later with your Vercel domain)
-app.use(cors({
-  origin: [
-    "http://localhost:5173", // local frontend
-    "https://mindweave-ai-folio-git-main-rohit-mukatis-projects.vercel.app" // ⬅️ baad me apna Vercel domain dalna
-  ]
-}));
+// -------------------------
+// 🔹 CORS Setup (env-based like chatbot.py)
+// -------------------------
+const FRONTEND_URL = process.env.FRONTEND_URL?.replace(/\/$/, ""); // remove trailing slash
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://127.0.0.1:5173",
+  "http://localhost:3000",
+  "http://127.0.0.1:3000",
+];
+
+if (FRONTEND_URL) {
+  allowedOrigins.push(FRONTEND_URL);
+}
+
+let corsOptions;
+if (process.env.ALLOW_ALL_ORIGINS === "1") {
+  corsOptions = {
+    origin: "*",
+    credentials: false, // IMPORTANT when origin = "*"
+  };
+} else {
+  corsOptions = {
+    origin: allowedOrigins,
+    credentials: true,
+  };
+}
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
+// -------------------------
+// 🔹 Email Setup
+// -------------------------
 const GMAIL_USER = process.env.GMAIL_USER;
 const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD;
 
@@ -35,6 +60,9 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// -------------------------
+// 🔹 API Endpoint
+// -------------------------
 app.post("/api/save-message", async (req, res) => {
   const message = req.body;
   const filePath = path.join(__dirname, "messages.txt");
@@ -90,7 +118,9 @@ app.post("/api/save-message", async (req, res) => {
   }
 });
 
+// -------------------------
 // 🔹 Cloud-ready PORT + host
+// -------------------------
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Backend server running on port ${PORT}`);
