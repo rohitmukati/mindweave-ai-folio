@@ -234,7 +234,7 @@ const ContactSection = () => {
                     name="projectType"
                     value={form.projectType}
                     onChange={handleChange}
-                    className="w-full h-10 px-3 rounded-md glass-card border border-glass-border focus:border-primary transition-colors bg-transparent text-foreground"
+                    className="w-full h-10 px-3 rounded-md glass-card border border-glass-border focus:border-primary transition-colors bg-gray-900 text-white"
                   >
                     <option value="">Select a service</option>
                     <option value="ai-model">AI Model Development</option>
