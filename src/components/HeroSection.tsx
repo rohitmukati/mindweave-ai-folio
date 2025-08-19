@@ -115,7 +115,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Floating tech icons */}
-                <div className="absolute -top-4 -right-4 glass-card p-3 rounded-lg float delay-1000">
+                <div className="absolute -top-4 -right-4 glass-card p-3 rounded-lg float delay-1000">##
                   <div className="w-6 h-6 bg-primary rounded-full pulse-glow"></div>
                 </div>
                 <div className="absolute -bottom-4 -left-4 glass-card p-3 rounded-lg float delay-2000">
