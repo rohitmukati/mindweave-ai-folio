@@ -7,9 +7,7 @@ import {
   MapPin,
   Linkedin,
   Github,
-  Twitter,
   Send,
-  Calendar,
   MessageCircle
 } from "lucide-react";
 import { useState } from "react";
@@ -174,7 +172,108 @@ const ContactSection = () => {
               </div>
 
               <form className="space-y-6" onSubmit={handleSubmit}>
-                {/* --- FORM FIELDS SAME AS BEFORE --- */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">
+                      First Name
+                    </label>
+                    <Input
+                      name="firstName"
+                      value={form.firstName}
+                      onChange={handleChange}
+                      placeholder="John"
+                      className="glass-card border-glass-border focus:border-primary transition-colors"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">
+                      Last Name
+                    </label>
+                    <Input
+                      name="lastName"
+                      value={form.lastName}
+                      onChange={handleChange}
+                      placeholder="Doe"
+                      className="glass-card border-glass-border focus:border-primary transition-colors"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Email Address
+                  </label>
+                  <Input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="john.doe@company.com"
+                    className="glass-card border-glass-border focus:border-primary transition-colors"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Company (Optional)
+                  </label>
+                  <Input
+                    name="company"
+                    value={form.company}
+                    onChange={handleChange}
+                    placeholder="Your Company"
+                    className="glass-card border-glass-border focus:border-primary transition-colors"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Project Type
+                  </label>
+                  <select
+                    name="projectType"
+                    value={form.projectType}
+                    onChange={handleChange}
+                    className="w-full h-10 px-3 rounded-md glass-card border border-glass-border focus:border-primary transition-colors bg-transparent text-foreground"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="ai-model">AI Model Development</option>
+                    <option value="chatbot">Conversational AI & Chatbots</option>
+                    <option value="computer-vision">Computer Vision Solutions</option>
+                    <option value="data-analytics">Data Analytics & ML Insights</option>
+                    <option value="mlops">MLOps & Infrastructure</option>
+                    <option value="consulting">AI Consulting & Strategy</option>
+                    <option value="custom">Custom Solution</option>
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Project Description
+                  </label>
+                  <Textarea
+                    name="description"
+                    value={form.description}
+                    onChange={handleChange}
+                    placeholder="Tell me about your project, challenges, and goals..."
+                    rows={4}
+                    className="glass-card border-glass-border focus:border-primary transition-colors resize-none"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">
+                    Timeline & Budget
+                  </label>
+                  <Textarea
+                    name="timeline"
+                    value={form.timeline}
+                    onChange={handleChange}
+                    placeholder="When do you need this completed? What's your budget range?"
+                    rows={2}
+                    className="glass-card border-glass-border focus:border-primary transition-colors resize-none"
+                  />
+                </div>
 
                 <Button
                   variant="hero"
@@ -194,8 +293,7 @@ const ContactSection = () => {
               </form>
             </div>
 
-            {/* Contact info and social links */}
-            {/* --- SAME AS BEFORE --- */}
+            {/* Contact info and social links (unchanged) */}
           </div>
         </div>
       </div>
