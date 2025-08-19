@@ -243,7 +243,9 @@ const ContactSection = () => {
                     <option value="data-analytics">Data Analytics & ML Insights</option>
                     <option value="mlops">MLOps & Infrastructure</option>
                     <option value="consulting">AI Consulting & Strategy</option>
+                    <option value="custom">AI Agents</option>
                     <option value="custom">Custom Solution</option>
+                    
                   </select>
                 </div>
 
