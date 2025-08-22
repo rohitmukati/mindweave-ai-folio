@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Welcome to your personal portfolio project
 
 ## Project info
 
@@ -8,9 +8,6 @@
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/afebe04e-8108-4128-abeb-6943e8701d79) and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 
@@ -146,6 +143,3 @@ See the project documentation or ask for a step-by-step guide!
 
 ---
 
-## Deployment
-
-See [Lovable](https://lovable.dev/projects/afebe04e-8108-4128-abeb-6943e8701d79) for deployment and custom domain setup.
