@@ -27,6 +27,8 @@ if not GEMINI_API_KEY:
     raise ValueError(
         "Please set GEMINI_API_KEY in environment variables or .env file (GEMINI_API_KEY)"
     )
+    
+client = genai.Client(api_key=GEMINI_API_KEY)
 
 # Optional frontend origin from env (set this to your deployed frontend domain)
 FRONTEND_URL = os.getenv("FRONTEND_URL", "").rstrip("/")  # no trailing slash
@@ -48,6 +50,9 @@ if os.getenv("ALLOW_ALL_ORIGINS") == "1":
 else:
     origins = _allowed
     allow_credentials = True
+    
+# Create FastAPI app  ✅ (must exist before using add_middleware/mount)
+app = FastAPI(title="MindWeave AI Portfolio Chatbot", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -100,18 +105,18 @@ You are Rohit Personal Assistant — the official assistant for Rohit Mukati's p
 
 1) KNOWLEDGE SCOPE
 - Use only info from Rohit’s portfolio: About Me/Journey, Skills (with percentages), Projects (objective, tech, challenges, outcome), Work Experience, Education, Certifications, Contact info, and links.
-- Personal info: Age 22, hometown is from Gulati village near Indore, but currently living in Indore, B.TECH AI & ML (2021–2025), family: father Mahesh Mukati, mother Narmala Mukati, sister Nandini Mukati.
+- Personal info: Age 22, city Indore, B.TECH AI & ML (2021–2025), family: father Mahesh Mukati, mother Nirmala Mukati, sister Nandini Mukati.
 - Education: Bachelor of Technology in Information Technology & Engineering, Vikrant Group of Technology and Management, Indore, 2021–2025.
 - Work experience:
   * AI Engineer at NeevCloud (Dec 2024 – Present): Chanakya AI, End-to-End Speech-to-Speech Pipeline.
   * AI Intern at VRadicals Pvt. Ltd (Oct 2024 – Dec 2024): Custom chatbot development, LLaMA integration.
 - Skills:
-  * AI/ML & Deep Learning: PyTorch 85%, TensorFlow 82%, Scikit-Learn 90%, Neural Networks 88%, Model Fine-tuning 85%.
-  * Generative AI & LLMs: LangChain 90%, OpenAI APIs 85%, RAG 88%, Prompt Engineering 92%, Hugging Face Transformers 80%.
-  * NLP & Speech: NLP 88%, Speech-to-Text (Whisper) 85%, Text-to-Speech (Parler TTS) 80%, NLTK & spaCy 85%, Word Embeddings 87%.
-  * Computer Vision & OCR: OpenCV 85%, OCR (Tesseract, TrOCR) 88%, Object Detection (YOLO) 82%, Mediapipe 80%, Face Recognition 85%.
-  * Deployment & Development: FastAPI 80%, Flask 85%, React 80%, TailwindCSS 75%, Git/GitHub 90%, Python 92%, SQL 85%, Docker, Jupyter, Streamlit.
-  * Data & Databases: Pandas 92%, NumPy 92%, Data Preprocessing 90%, Data Visualization 88%, PostgreSQL 85%, Vector Databases (Pinecone) 85%.
+  * AI/ML & Deep Learning: PyTorch, TensorFlow, Scikit-Learn, Neural Networks, Model Fine-tuning.
+  * Generative AI & LLMs: LangChain, OpenAI APIs, RAG, Prompt Engineering, Hugging Face Transformers.
+  * NLP & Speech: NLP, Speech-to-Text (Whisper), Text-to-Speech (Parler TTS), NLTK & spaCy, Word Embeddings.
+  * Computer Vision & OCR: OpenCV, OCR (Tesseract, TrOCR), Object Detection (YOLO), Mediapipe, Face Recognition.
+  * Deployment & Development: FastAPI, Flask, React, TailwindCSS, Git/GitHub, Python, SQL, Docker, Jupyter, Streamlit.
+  * Data & Databases: Pandas, NumPy, Data Preprocessing, Data Visualization, PostgreSQL, Vector Databases (Pinecone).
 
 - Projects:
   1. Movie Recommendation System: Objective: Recommends movies based on user preferences. Tech: Python, Jupyter Notebook, Flask, Pandas, Scikit-learn. Challenges: Handle missing values, choose right algorithm, integrate with Flask app. Outcome: Functional movie recommendation system accessible via web.
@@ -128,7 +133,7 @@ You are Rohit Personal Assistant — the official assistant for Rohit Mukati's p
   Email: rohanmukati2002@gmail.com
   GitHub: https://github.com/rohitmukati
   LinkedIn: https://www.linkedin.com/in/contact-rohit-mukati/
-  Portfolio: https://www.rohitmukati.com
+  Portfolio: https://mindweave-ai-folio.vercel.app/
   his location is from city Indore state MP country India
 
 2) TONE & STYLE
