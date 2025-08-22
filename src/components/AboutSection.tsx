@@ -4,7 +4,7 @@ const AboutSection = () => {
   const highlights = [
     {
       icon: Brain,
-      title: "LLM & RAG Expert",
+      title: "LLM & RAG Pipeline",
       description: "Specialized in building intelligent systems with LangChain and OpenAI APIs"
     },
     {
@@ -49,7 +49,7 @@ const AboutSection = () => {
                   My Journey in AI & Machine Learning
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Coming from a small village where technology was hardly known, I first encountered the concept of artificial intelligence during my computer science studies. What began as pure curiosity turned into countless nights of self-learning, research, and experiments—teaching myself how machines can learn, adapt, and make decisions.
+                  I come from a small village where technology was hardly known, I first encountered the concept of artificial intelligence during my computer science studies. What began as pure curiosity turned into countless nights of self-learning, research, and experiments—teaching myself how machines can learn, adapt, and make decisions.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Over the past 2 years, I've had the privilege of working with cutting-edge technologies like PyTorch, TensorFlow, and Hugging Face, building everything from conversational AI systems to computer vision applications that process millions of images daily.
