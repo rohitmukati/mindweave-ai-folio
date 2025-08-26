@@ -52,7 +52,7 @@ const AboutSection = () => {
                   I come from a small village where technology was hardly known, I first encountered the concept of artificial intelligence during my computer science studies. What began as pure curiosity turned into countless nights of self-learning, research, and experiments—teaching myself how machines can learn, adapt, and make decisions.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Over the past 2 years, I've had the privilege of working with cutting-edge technologies like PyTorch, TensorFlow, and Hugging Face, building everything from conversational AI systems to computer vision applications that process millions of images daily.
+                  Over the past 1 years, I've had the privilege of working with cutting-edge technologies like PyTorch, TensorFlow, and Hugging Face, building everything from conversational AI systems to computer vision applications that process millions of images daily.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   What drives me today is the same spark I felt in those early days—bridging the gap between research and real-world applications, and building AI systems that make complex tasks simple, intuitive, and meaningful.
@@ -66,7 +66,7 @@ const AboutSection = () => {
                   <div className="text-sm text-muted-foreground">AI Projects Built</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">2+</div>
+                  <div className="text-3xl font-bold gradient-text">1+</div>
                   <div className="text-sm text-muted-foreground">Industry Experience</div>
                 </div>
               </div>
